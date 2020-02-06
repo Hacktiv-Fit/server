@@ -1,8 +1,14 @@
-const router = require('express').Router()
+const express = require('express')
+const router = express.Router()
+const nutritionix = require('./nutritionix')
 const UserRoutes = require('./user')
 const sportsDb = require('./sportsDbRoute')
 
 router.use('/users', UserRoutes)
+<<<<<<< HEAD
 router.use('/sportsDb', sportsDb)
+=======
+router.use('/nutritionix', nutritionix)
+>>>>>>> development
 
 module.exports = router
