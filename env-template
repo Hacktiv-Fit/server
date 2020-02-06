@@ -1,5 +1,6 @@
 PG_USERNAME
 PG_PASSWORD
-PORT
+CLIENT_ID='818771928668-tuk368d6s823e6971pqd7bssfp7ufjuu.apps.googleusercontent.com'
+PORT=3000
 SECRET_PASSWORD='Hacktiv-Fit'
-JWT_SECRET
+JWT_SECRET='Hacktiv-Fit'
