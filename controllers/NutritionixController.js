@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 class NutritionixController {
-    static excercise(req, res) {
+    static excercise(req, res, next) {
         const { query, gender, weight_kg, height_cm, age } = req.body
         axios({
             method: 'post',
@@ -14,10 +14,14 @@ class NutritionixController {
             data: { query, gender, weight_kg, height_cm, age }
           })
           .then(({ data }) => {
-              res.status(200).json(data)
+              res.status(200).json(data.exercises)
           })
           .catch(err => {
-              res.status(500).json(err.message)
+              next({
+                  name: 'NutritionixError',
+                  status: 400,
+                  message: 'Bad Request'
+              })
           })
     } 
 }
