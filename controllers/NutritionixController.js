@@ -14,7 +14,8 @@ class NutritionixController {
             data: { query, gender, weight_kg, height_cm, age }
           })
           .then(({ data }) => {
-              res.status(200).json(data)
+              console.log(data)
+              res.status(200).json(data.exercises)
           })
           .catch(err => {
               res.status(500).json(err.message)
