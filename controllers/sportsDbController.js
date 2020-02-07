@@ -3,6 +3,7 @@ const axios = require('axios')
 
 class Controller{
     static footballByCountry(req, res, next){
+        console.log(req.body)
         console.log(req.body.country)
         axios({
             url : `https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?s=Soccer&c=${req.body.country}`,
