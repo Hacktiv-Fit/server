@@ -256,6 +256,287 @@ http://localhost:3000/
     ```
     <br/>
 
+## sportsDb
+
+**GET FOOTBALL**
+----
+  Return Football database.
+
+* **URL**
+  ```
+  /sportsDb/football
+  ```
+
+* **Method:**
+
+  `POST`
+  
+*  **URL Params**
+  
+    None
+
+* **Data Params**
+
+  **Required**
+    
+    Headers:
+    
+    `Content-Type: application/x-www-form-urlencoded`
+
+    Body :
+
+    ```
+    country: String
+    league: String
+    ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    
+    expample
+    ```
+    {
+    "teams": [
+        {
+            "idTeam": "134368",
+            "idSoccerXML": "824",
+            "idAPIfootball": "1360",
+            "intLoved": null,
+            "strTeam": "Accrington",
+            "strTeamShort": null,
+            "strAlternate": "Accrington Stanley",
+            "intFormedYear": "1968",
+            "strSport": "Soccer",
+            "strLeague": "English League 1",
+            "idLeague": "4396",
+            "strDivision": null,
+            "strManager": "",
+            "strStadium": "Crown Ground",
+            "strKeywords": "Stanley, Accy Stanley",
+            .....
+            }, ....
+        ]
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 Unauthorized <br />
+    **Content:**
+    
+    ```
+    {
+      "msg": "You must Login First"
+    }
+    ```
+  OR
+  * **Code:** 400 Bad Request <br />
+    **Content:**
+    
+    ```
+    {
+      "msg": "Bad Request"
+    }
+    ```
+  OR
+  * **Code:** 500 Internal Server Error <br />
+    **Content:**
+    
+    ```
+    {
+      "msg": "Internal Server Error"
+    }
+    ```
+    <br/>
+
+**GET BASKETBALL**
+----
+  Return Basketball database.
+
+* **URL**
+  ```
+  /sportsDb/basketball
+  ```
+
+* **Method:**
+
+  `POST`
+  
+*  **URL Params**
+  
+    None
+
+* **Data Params**
+
+  **Required**
+    
+    Headers:
+    
+    `Content-Type: application/x-www-form-urlencoded`
+
+    Body :
+
+    ```
+    country: String
+    league: String
+    ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    
+    expample
+    ```
+    {
+    "teams": [
+        {
+            "idTeam": "136323",
+            "idSoccerXML": null,
+            "idAPIfootball": null,
+            "intLoved": null,
+            "strTeam": "Agua Caliente Clippers",
+            "strTeamShort": null,
+            "strAlternate": "",
+            "intFormedYear": "2017",
+            "strSport": "Basketball",
+            "strLeague": "NBA D-League",
+            "idLeague": "4388",
+            "strDivision": null,
+            "strManager": "",
+            "strStadium": "Citizens Business Bank Arena",
+            .....
+            }, ....
+        ]
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 Unauthorized <br />
+    **Content:**
+    
+    ```
+    {
+      "msg": "You must Login First"
+    }
+    ```
+  OR
+  * **Code:** 400 Bad Request <br />
+    **Content:**
+    
+    ```
+    {
+      "msg": "Bad Request"
+    }
+    ```
+  OR
+  * **Code:** 500 Internal Server Error <br />
+    **Content:**
+    
+    ```
+    {
+      "msg": "Internal Server Error"
+    }
+    ```
+    <br/>
+
+**GET AMERICAN FOOTBALL**
+----
+  Return American Football database.
+
+* **URL**
+  ```
+  /sportsDb/americanFootball
+  ```
+
+* **Method:**
+
+  `POST`
+  
+*  **URL Params**
+  
+    None
+
+* **Data Params**
+
+  **Required**
+    
+    Headers:
+    
+    `Content-Type: application/x-www-form-urlencoded`
+
+    Body :
+
+    ```
+    country: String
+    league: String
+    ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    
+    expample
+    ```
+    {
+    "teams": [
+        {
+            "idTeam": "136981",
+            "idSoccerXML": null,
+            "idAPIfootball": null,
+            "intLoved": null,
+            "strTeam": "Abilene Christian",
+            "strTeamShort": null,
+            "strAlternate": "Wildcats",
+            "intFormedYear": "1919",
+            "strSport": "American Football",
+            "strLeague": "NCAA Division 1",
+            "idLeague": "4479",
+            "strDivision": "FCS",
+            "strManager": "",
+            "strStadium": "Anthony Field at Wildcat Stadium",
+            "strKeywords": "Wildcats",
+            .....
+            }, ....
+        ]
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 Unauthorized <br />
+    **Content:**
+    
+    ```
+    {
+      "msg": "You must Login First"
+    }
+    ```
+  OR
+  * **Code:** 400 Bad Request <br />
+    **Content:**
+    
+    ```
+    {
+      "msg": "Bad Request"
+    }
+    ```
+  OR
+  * **Code:** 500 Internal Server Error <br />
+    **Content:**
+    
+    ```
+    {
+      "msg": "Internal Server Error"
+    }
+    ```
+    <br/>
+
+
 ## Wger
 
 **GET ALL INGREDIENT LIST**
@@ -746,7 +1027,7 @@ http://localhost:3000/
     expample
     ```
     {}
-    ```
+     ```
  
 * **Error Response:**
 
